@@ -1,0 +1,12 @@
+specVersion: "v1beta"
+serviceId: "drycleanpointofsale"
+location: "us-central1"
+schema:
+  source: "./schema"
+  datasource:
+    postgresql:
+      database: "fdcdb"
+      cloudSql:
+        instanceId: "drycleanpointofsale-fdc"
+      # schemaValidation: "COMPATIBLE"
+connectorDirs: ["./connector"]
