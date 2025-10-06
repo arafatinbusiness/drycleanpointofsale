@@ -29,7 +29,7 @@ export default function Layout({ children, title = "Dry Cleaning POS Software | 
               },
               "contactPoint": {
                 "@type": "ContactPoint",
-                "telephone": "+1-555-123-4567",
+                "telephone": "+8801842701601",
                 "contactType": "customer service",
                 "areaServed": "US",
                 "availableLanguage": "en"
@@ -51,7 +51,7 @@ export default function Layout({ children, title = "Dry Cleaning POS Software | 
               "name": "DryClean POS Software",
               "description": "Custom POS and management software solutions for dry cleaning and laundry businesses",
               "url": "https://drycleanpointofsale.com",
-              "telephone": "+1-555-123-4567",
+              "telephone": "+8801842701601",
               "address": {
                 "@type": "PostalAddress",
                 "addressCountry": "US"
@@ -148,8 +148,8 @@ export default function Layout({ children, title = "Dry Cleaning POS Software | 
               <div>
                 <h4 className="text-lg font-semibold mb-4">Contact</h4>
                 <ul className="space-y-2 text-gray-300">
-                  <li>Email: info@drycleanpointofsale.com</li>
-                  <li>Phone: (555) 123-4567</li>
+                  <li>Email: arafatinbusiness@gmail.com</li>
+                  <li>Phone: +8801842701601</li>
                   <li>Hours: Mon-Fri 9AM-6PM EST</li>
                 </ul>
               </div>

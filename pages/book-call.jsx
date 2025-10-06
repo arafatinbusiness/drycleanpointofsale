@@ -152,10 +152,10 @@ export default function BookCall() {
                   Send us your requirements and we'll get back to you within 24 hours.
                 </p>
                 <a 
-                  href="mailto:info@drycleanpointofsale.com" 
+                  href="mailto:arafatinbusiness@gmail.com"
                   className="text-blue-600 hover:text-blue-700 font-medium"
                 >
-                  info@drycleanpointofsale.com
+                  arafatinbusiness@gmail.com
                 </a>
               </div>
               
@@ -170,10 +170,10 @@ export default function BookCall() {
                   Speak directly with our team during business hours.
                 </p>
                 <a 
-                  href="tel:+15551234567" 
+                  href="tel:+8801842701601" 
                   className="text-green-600 hover:text-green-700 font-medium"
                 >
-                  (555) 123-4567
+                  +8801842701601
                 </a>
               </div>
               
