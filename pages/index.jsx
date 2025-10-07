@@ -139,29 +139,11 @@ export default function Home() {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {/* Mobile Responsive POS */}
-            <div className="text-center">
+          <div className="max-w-6xl mx-auto">
+            {/* Main POS Interface - Dedicated Section */}
+            <div className="text-center mb-16">
               <div 
-                className="cursor-pointer w-full max-w-md mx-auto rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
-                onClick={() => openImage('/mobile_reponsive pos.png', 'Mobile Responsive POS System - Optimized for mobile devices')}
-              >
-                <img 
-                  src="/mobile_reponsive pos.png" 
-                  alt="Mobile Responsive POS System" 
-                  className="w-full rounded-2xl"
-                />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mt-6 mb-3">Mobile Responsive POS</h3>
-              <p className="text-gray-600">
-                Fully optimized for mobile devices with touch-friendly interface and offline capabilities
-              </p>
-            </div>
-            
-            {/* POS Main Interface */}
-            <div className="text-center">
-              <div 
-                className="cursor-pointer w-full max-w-md mx-auto rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
+                className="cursor-pointer w-full max-w-4xl mx-auto rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-[1.02]"
                 onClick={() => openImage('/pos main.jpg', 'Custom POS System Main Interface - Order management and customer details')}
               >
                 <img 
@@ -170,28 +152,49 @@ export default function Home() {
                   className="w-full rounded-2xl"
                 />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mt-6 mb-3">Main POS Interface</h3>
-              <p className="text-gray-600">
+              <h3 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Main POS Interface</h3>
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
                 Complete order management with customer details, real-time status tracking, and integrated payment processing
               </p>
             </div>
             
-            {/* POS Advanced Features */}
-            <div className="text-center">
-              <div 
-                className="cursor-pointer w-full max-w-md mx-auto rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
-                onClick={() => openImage('/pos2.jpg', 'Custom POS System Advanced Features - Inventory tracking and analytics')}
-              >
-                <img 
-                  src="/pos2.jpg" 
-                  alt="Custom POS System Advanced Features" 
-                  className="w-full rounded-2xl"
-                />
+            {/* Additional Features - Smaller Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+              {/* Mobile Responsive POS */}
+              <div className="text-center">
+                <div 
+                  className="cursor-pointer w-full max-w-sm mx-auto rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+                  onClick={() => openImage('/mobile_reponsive pos.png', 'Mobile Responsive POS System - Optimized for mobile devices')}
+                >
+                  <img 
+                    src="/mobile_reponsive pos.png" 
+                    alt="Mobile Responsive POS System" 
+                    className="w-full rounded-2xl"
+                  />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mt-6 mb-3">Mobile Responsive POS</h3>
+                <p className="text-gray-600">
+                  Fully optimized for mobile devices with touch-friendly interface and offline capabilities
+                </p>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mt-6 mb-3">Advanced Features</h3>
-              <p className="text-gray-600">
-                Inventory management, analytics dashboard, staff performance tracking, and automated reporting
-              </p>
+              
+              {/* POS Advanced Features */}
+              <div className="text-center">
+                <div 
+                  className="cursor-pointer w-full max-w-sm mx-auto rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+                  onClick={() => openImage('/pos2.jpg', 'Custom POS System Advanced Features - Inventory tracking and analytics')}
+                >
+                  <img 
+                    src="/pos2.jpg" 
+                    alt="Custom POS System Advanced Features" 
+                    className="w-full rounded-2xl"
+                  />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mt-6 mb-3">Advanced Features</h3>
+                <p className="text-gray-600">
+                  Inventory management, analytics dashboard, staff performance tracking, and automated reporting
+                </p>
+              </div>
             </div>
           </div>
           
