@@ -5,6 +5,16 @@ import Layout from '../../components/Layout';
 // Sample blog posts data - in a real app, this would come from a CMS or database
 const blogPosts = [
   {
+    id: 6,
+    slug: 'modern-pos-game-changer-laundry-business',
+    title: 'Why a Modern POS is a Game-Changer for Your Laundry Business',
+    excerpt: 'Discover how a modern POS system can transform your laundry business operations, improve customer experience, and boost your bottom line.',
+    date: '2025-10-07',
+    readTime: '10 min read',
+    category: 'Business Growth',
+    image: '/shifapos1.png'
+  },
+  {
     id: 5,
     slug: 'best-point-of-sale-software-guide',
     title: 'Best Point of Sale Software for Retail Stores and Small Businesses',
