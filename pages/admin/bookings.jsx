@@ -10,6 +10,7 @@ export default function BookingsAdmin() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [generatingMeetings, setGeneratingMeetings] = useState({});
+  const [selectedMessage, setSelectedMessage] = useState(null);
   const router = useRouter();
 
   useEffect(() => {
@@ -272,6 +273,17 @@ export default function BookingsAdmin() {
                           </td>
                           <td className="py-3 px-4">
                             <div className="flex flex-col space-y-2">
+                              {booking.message && (
+                                <button
+                                  onClick={() => setSelectedMessage({
+                                    name: booking.name,
+                                    message: booking.message
+                                  })}
+                                  className="text-xs bg-purple-600 hover:bg-purple-700 text-white px-3 py-1 rounded transition-colors text-center"
+                                >
+                                  View Message
+                                </button>
+                              )}
                               {!booking.meetingDetails && (
                                 <button
                                   onClick={() => handleGenerateMeeting(booking)}
@@ -361,6 +373,44 @@ export default function BookingsAdmin() {
           </div>
         </div>
       </div>
+
+      {/* Message Popup Modal */}
+      {selectedMessage && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+          <div className="bg-white rounded-2xl max-w-2xl w-full max-h-[80vh] overflow-y-auto">
+            <div className="p-6">
+              <div className="flex justify-between items-center mb-6">
+                <h3 className="text-2xl font-bold text-gray-900">
+                  Message from {selectedMessage.name}
+                </h3>
+                <button 
+                  onClick={() => setSelectedMessage(null)}
+                  className="text-gray-400 hover:text-gray-600"
+                >
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+              </div>
+
+              <div className="bg-gray-50 rounded-lg p-4">
+                <p className="text-gray-700 whitespace-pre-wrap">
+                  {selectedMessage.message || "No message provided."}
+                </p>
+              </div>
+
+              <div className="mt-6 text-center">
+                <button
+                  onClick={() => setSelectedMessage(null)}
+                  className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors font-medium"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </Layout>
   );
 }

@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { useState } from 'react';
+import BookingWidget from './BookingWidget';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -36,12 +37,12 @@ export default function Header() {
             >
               Admin Dashboard
             </Link>
-            <Link 
-              href="/book-call" 
-              className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors font-medium"
-            >
-              Book Free Call
-            </Link>
+            <div className="ml-4">
+              <BookingWidget 
+                buttonText="Book Free Call" 
+                buttonClass="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors font-medium"
+              />
+            </div>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -96,13 +97,12 @@ export default function Header() {
               >
                 Admin Dashboard
               </Link>
-              <Link 
-                href="/book-call" 
-                className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium text-center"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Book Free Call
-              </Link>
+              <div className="pt-2">
+                <BookingWidget 
+                  buttonText="Book Free Call" 
+                  buttonClass="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium w-full"
+                />
+              </div>
             </nav>
           </div>
         )}

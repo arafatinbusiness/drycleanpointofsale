@@ -1,8 +1,6 @@
 import { useState } from "react";
-import { collection, addDoc, serverTimestamp } from "firebase/firestore";
-import { db } from "../lib/firebase";
 
-export default function BookingWidget() {
+export default function BookingWidget({ buttonText = "Book Free POS Assessment", buttonClass = "bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium" }) {
   const [isOpen, setIsOpen] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
@@ -27,15 +25,8 @@ export default function BookingWidget() {
       // Get user's timezone
       const userTimezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
       
-      // Save booking to Firestore
-      const docRef = await addDoc(collection(db, "bookings"), {
-        ...formData,
-        userTimezone: userTimezone,
-        createdAt: serverTimestamp(),
-        status: "pending"
-      });
-      
-      console.log("Booking saved with ID: ", docRef.id);
+      // Simulate saving booking (without Firebase for now)
+      console.log("Booking submitted:", formData);
       
       // Set booking details for success message
       setBookingDetails({
@@ -76,16 +67,12 @@ export default function BookingWidget() {
 
   return (
     <div className="text-center">
-      <h3 className="text-2xl font-bold mb-4 text-white">Ready to Transform Your Business?</h3>
       <button 
         onClick={() => setIsOpen(true)}
-        className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium"
+        className={buttonClass}
       >
-        Book Free POS Assessment
+        {buttonText}
       </button>
-      <p className="text-sm text-blue-100 mt-3">
-        30-minute consultation • No obligation • Get custom solution proposal
-      </p>
 
       {/* Booking Modal */}
       {isOpen && (
