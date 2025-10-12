@@ -5,6 +5,16 @@ import Layout from '../../components/Layout';
 // Sample blog posts data - in a real app, this would come from a CMS or database
 const blogPosts = [
   {
+    id: 7,
+    slug: 'go-digital-laundry-shop-guide-modern-pos-management-software',
+    title: 'Go Digital with Your Laundry Shop: A Guide to Modern POS & Management Software',
+    excerpt: 'Are you still running your laundry or dry cleaning business with manual registers, excel sheets, and stacks of paper receipts? Discover how a modern POS system can transform your operations.',
+    date: '2025-10-09',
+    readTime: '8 min read',
+    category: 'Business Growth',
+    image: '/pos6.png'
+  },
+  {
     id: 6,
     slug: 'modern-pos-game-changer-laundry-business',
     title: 'Why a Modern POS is a Game-Changer for Your Laundry Business',
